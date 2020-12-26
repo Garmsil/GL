@@ -21,7 +21,7 @@ namespace GameLife
             }
         }
 
-        public Cell(Coord position, int Size, Brush Fill, Brush Stroke) // Конструктор инициализации нашей клетки
+        public Cell(Coord position, int Size, System.Windows.Media.Brush Fill, System.Windows.Media.Brush Stroke) // Конструктор инициализации нашей клетки
         {
             rect = new Rectangle() { Width = Size + 1, Height = Size + 1, Fill = Fill, Stroke = Stroke }; // Создаем квадрат с нужными размерами и заливкой
             Cycle = CycleLife.Empty; // Говорим, что по умолчанию он будет мертвым
@@ -52,13 +52,13 @@ namespace GameLife
             cells.Clear();
         }
 
-        public Brush Death()
+        public System.Windows.Media.Brush Death()
         {
             Cycle = CycleLife.Empty;
 
             return Brushes.Green;
         }
-        public Brush GiveLife()
+        public System.Windows.Media.Brush GiveLife()
         {
             Cycle = CycleLife.New;
 
