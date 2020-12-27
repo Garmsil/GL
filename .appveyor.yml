@@ -7,6 +7,6 @@ before_build:
 # package Web Application project for Web Deploy
 build:
   verbosity: minimal
-publish_wap: true
+
 
 
